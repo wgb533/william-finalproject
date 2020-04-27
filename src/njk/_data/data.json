@@ -15,5 +15,28 @@
       "author": "Leonora Carrington",
       "blurb": "The Hearing Trumpet is a story by Leonora Carrington about 92-year-old Marian Leatherby, who is given the gift of a hearing trumpet only to discover that what her family is saying is that she is to be committed to an institution."
     }
+  ],
+  "members": [
+    {
+      "Name": "Freddie Mercury",
+      "url": "freddiemercury.html",
+      "title": "Vocals/Piano" 
+    },
+    {
+      "Name": "Brian May",
+      "url": "brianmay.html",
+      "title": "Guitar/Vocals"
+    },
+    {
+      "Name": "Roger Taylor",
+      "url": "rogertaylor.html",
+      "title": "Drums/Vocals"
+    }
+    ,{
+      "Name": "John Deacon",
+      "url": "johndeacon.html",
+      "title": "Bass"
+    }
+   
   ]
 }

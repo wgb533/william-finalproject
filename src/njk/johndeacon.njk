@@ -1,0 +1,9 @@
+{% extends '_layouts/detail-entry.njk' %}
+{% set entry= data.entries[3] %}
+
+
+{% block story %}
+    <h1>{{entry.title}}</h1>
+    <h5>John Deacon {{entry.date}}</h5>
+    <p>John Richard Deacon (born 19 August 1951) is an English retired musician, best known for being the bass guitarist for the rock band Queen. He composed several songs for the group—including Top 10 hits "You're My Best Friend", "Another One Bites the Dust", and "I Want to Break Free"; co-wrote "Under Pressure", "Friends Will Be Friends" and "One Vision"—and was involved in the band's financial management.</p>
+    {% endblock%}
