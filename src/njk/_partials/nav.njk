@@ -10,12 +10,8 @@
           Band Members
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="freddiemercury.html">Freddie Mercury</a>
-            <a class="dropdown-item" href="brianmay.html">Brian May</a>
-            <a class="dropdown-item" href="rogertaylor.html">Roger Taylor</a>
-            <a class="dropdown-item" href="rogertaylor.html">John Deacon</a>
-            <a class="dropdown-item" href="albums.html">Albums</a>
-
+        {% for member in queen.members %}
+        <a class="dropdown-item" href="{{member.slug}}.html">{{member.name}}</a>
         </div>
       </li>
     </ul>
