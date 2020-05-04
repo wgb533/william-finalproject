@@ -1,23 +1,37 @@
-{% extends '_layouts/base.njk' %}
+{% extends '_layouts/base.njk'%}
 
-{% block page_title %}New index page title{% endblock %}
+<title>Queen | {% block page_title %}Queen {% endblock %} </title>
 
-{% block page_description %}The search description for this page goes here.{% endblock %}
+{% block page_description %}The search description for this page goes here. {% endblock%}
 
-{% block content %}
-<img src="img/queen.jpg" alt="Queen" class="img-fluid">
+{% block content%}
 <div class="container">
+<h1>Band Members</h1>
+    <div class="row">
+        {% for member in queen.members %}
+        <div class="col-sm-6 col-lg-3">
+        <div class="card mb-4">
+        <img src="img/members/{{member.image}}" class="card-img-top" alt="....">
+            <div class="card-body">
+            <h5 class="card-title"> {{member.name}}</h5>
+            <p class="card-text">{{member.instruments}}</p>
+            <p> <a href="{{member.slug}}.html"> Link to {{member.name}}</a> Lead Vocals/Piano </p>
+            </div>
+            </div>
+            </div>
+            {% endfor %}
+        </div>
+  <div class="container">
+  <h2> Discography</h2>
   <div class="row">
-    <div class="col">
-      <h1>Queen</h1>
-      <p>This is a <a href="detail-entry-example.html">link to a blog entry example</a> which shows a simple detail entry page example. It uses the "data-entry.njk" layout.</p>
-      <p>This is a <a href="detail-book-shipping-news.html">link to a book page example</a> which uses a more complex detail layout (detail-book.njk) where data is pulled into the layout and the page calls for a specific row in the data.</p>
-      <ul> 
-        {% for book in data.books %}
-          <li>{{ book.title }}, {{ book.author }}</li>
-        {% endfor %}
-     </ul>
-    </div>
+  {% for Discography in queen.discography%}
+  <div class="col-sm-6 col-lg-3">
+  <img src="img/discography/{{disc.image}}" class="card-img-top" alt="....">
+  <div class="card-body">
+  <h5 class="card-title"> {{discography.name}}</h5>
+  <p class="card-text"> {{discography.year}}</p>
   </div>
-</div>
+  </div>
+  </div>
+
 {% endblock %}

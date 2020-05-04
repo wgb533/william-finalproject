@@ -1,10 +1,2 @@
 {% extends '_layouts/detail-entry.njk' %}
-{% set entry= data.entries[1] %}
-
-
-{% block story %}
-<img src="img/Freddie-Mercury.jpg" alt="Freddie Mercury">
-    <h1>{{entry.title}}</h1>
-    <h5> Freddie Mercury{{entry.date}}</h5>
-    <p>Freddie Mercury (born Farrokh Bulsara; 5 September 1946 – 24 November 1991) was a British singer, songwriter, record producer, and lead vocalist of the rock band Queen. Regarded as one of the greatest lead singers in the history of rock music, he was known for his flamboyant stage persona and four-octave vocal range.</p>
-    {% endblock%}
+{% set member= queen.members[0] %}
