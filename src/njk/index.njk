@@ -6,32 +6,36 @@
 
 {% block content%}
 <div class="container">
-<h1>Band Members</h1>
+    <h1>Band Members</h1>
     <div class="row">
-        {% for member in queen.members %}
-        <div class="col-sm-6 col-lg-3">
+    {% for member in queen.members %}
+    <div class="col-sm-6 col-lg-3">
         <div class="card mb-4">
-        <img src="img/members/{{member.image}}" class="card-img-top" alt="....">
+            <img src="img/members/{{member.image}}" class="card-img-top" alt="....">
             <div class="card-body">
-            <h5 class="card-title"> {{members.names}}</h5>
-            <p class="card-text">{{member.instruments}}</p>
-            <p> <a href="{{members.slug}}.html"> Link to {{members.name}}</a> Lead Vocals/Piano </p>
+                <h3 class="card-title"> {{member.name}}</h3>
+                  <p class="card-text"> <a href="{{member.slug}}.html"> {{member.name}}</a></p>
             </div>
-            </div>
-            </div>
-            {% endfor %}
         </div>
-  <div class="container">
-  <h2> Discography</h2>
-  <div class="row">
-  {% for Discography in queen.discography%}
-  <div class="col-sm-6 col-lg-3">
-  <img src="img/discography/{{disc.image}}" class="card-img-top" alt="....">
-  <div class="card-body">
-  <h5 class="card-title"> {{discography.name}}</h5>
-  <p class="card-text"> {{discography.year}}</p>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="container">
+  <h1> Discography </h1>
+    <div class="row">
+  
+  {% for disc in queen.discography %}
+    <div class="col-sm-6 col-lg-3">
+        <img src="img/discs/{{disc.image}}" class="card-img-top" alt="....">
+        <div class="card-body">
+    <h4 class="card-title"> {{disc.name}}</h4>
+        <p class="card-text"> {{disc.year}}</p>
+    </div>
   </div>
+  {% endfor %}
   </div>
-  </div>
+</div>
 
 {% endblock %}
+

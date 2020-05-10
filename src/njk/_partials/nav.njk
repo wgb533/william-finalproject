@@ -12,8 +12,10 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
         {% for member in queen.members %}
         <a class="dropdown-item" href="{{member.slug}}.html">{{member.name}}</a>
+         {% endfor %}
         </div>
       </li>
     </ul>
   </div>
+  </a>
 </nav>
