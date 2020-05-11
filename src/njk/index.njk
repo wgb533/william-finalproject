@@ -13,24 +13,40 @@
         <div class="card mb-4">
             <img src="img/members/{{member.image}}" class="card-img-top" alt="....">
             <div class="card-body">
-                <h3 class="card-title"> {{member.name}}</h3>
-                  <p class="card-text"> <a href="{{member.slug}}.html"> {{member.name}}</a></p>
+                <h3 class="card-title"> <a href="{{member.slug}}.html"> {{member.name}}</a></h3>    
             </div>
         </div>
     </div>
     {% endfor %}
 </div>
 
+
 <div class="container">
   <h1> Discography </h1>
-    <div class="row">
-  
+    <div class="row">  
   {% for disc in queen.discography %}
     <div class="col-sm-6 col-lg-3">
         <img src="img/discs/{{disc.image}}" class="card-img-top" alt="....">
         <div class="card-body">
     <h4 class="card-title"> {{disc.name}}</h4>
-        <p class="card-text"> {{disc.year}}</p>
+        <p class="card-text"> {{disc.title}}</p>
+        <p city="card-text">{{disc.year}}</p>
+      </div>
+    </div>
+  {% endfor %}
+  </div>
+</div>
+
+<div class="container">
+  <h1> Tour Dates </h1>
+    <div class="row">
+
+{% for tourdates in tour.tourdates %}
+    <div class="col-sm-6 col-lg-3">
+        <div class="card-body">
+    <h4 class="card-title"> {{tourdates.date}}</h4>
+        <p class="card-text"> {{tourdates.city}} </p>
+        <p city="card-text"> {{tourdates.venue}}</p>
     </div>
   </div>
   {% endfor %}

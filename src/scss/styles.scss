@@ -1,3 +1,18 @@
+
+title {
+  background-color: black;
+  color: white;
+  font-family:'Dancing Script', cursive;
+
+}
+
+h4 {
+  color: white;
+  background-color: black;
+  font-size: x-large;
+  font-weight: bold;
+}
+
 body {
   background-color: black;
   color: white;
@@ -6,6 +21,7 @@ body {
 p {
   background-color: black;
   color: white;
+  font-family: 'Gotu', sans-serif;
 }
 
 div {
@@ -13,7 +29,15 @@ div {
   color: white;
 }
 
-.nav {
+a {
+  color: white;
+}
+
+.class {
   background-color: black;
   color: white;
+}
+
+.dropdown-item {
+  text-align: left;
 }
